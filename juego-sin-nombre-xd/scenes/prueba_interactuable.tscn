@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbwu83srktl0y"]
+
+[ext_resource type="Script" uid="uid://bfr8hjuk6mua3" path="res://scripts/prueba_interactuable.gd" id="1_s8inb"]
+[ext_resource type="PackedScene" uid="uid://cogdtf7h6x238" path="res://scenes/Interactable.tscn" id="2_867wh"]
+[ext_resource type="Texture2D" uid="uid://caqrhish8glf" path="res://icon.svg" id="3_867wh"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_aec15"]
+
+[node name="PruebaInteractuable" type="Node3D"]
+script = ExtResource("1_s8inb")
+
+[node name="Interactable" parent="." instance=ExtResource("2_867wh")]
+interact_name = "Prueba interactuable"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable"]
+shape = SubResource("SphereShape3D_aec15")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 0, 0, 0)
+texture = ExtResource("3_867wh")

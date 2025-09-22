@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5ktpxfh4bsfa"]
+[gd_scene load_steps=5 format=3 uid="uid://c5ktpxfh4bsfa"]
 
-[ext_resource type="Script" uid="uid://d2ut221eq2h3t" path="res://player.gd" id="1_xhfnw"]
+[ext_resource type="Script" uid="uid://d2ut221eq2h3t" path="res://scripts/player.gd" id="1_xhfnw"]
+[ext_resource type="PackedScene" uid="uid://bcwtbjdm5i2me" path="res://scenes/InteractingComponent.tscn" id="2_v6fml"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_kpjcp"]
 
@@ -23,4 +24,6 @@ shape = SubResource("ConvexPolygonShape3D_xhfnw")
 [node name="PitchPivot" type="Node3D" parent="TwistPivot"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -0.011, 2, 5)
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866026, 0, -0.866026, 0.5, 0, 5, 2)
+
+[node name="InteractingComponent" parent="." instance=ExtResource("2_v6fml")]

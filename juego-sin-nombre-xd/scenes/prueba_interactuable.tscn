@@ -5,12 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://caqrhish8glf" path="res://icon.svg" id="3_867wh"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_aec15"]
+radius = 0.819123
 
 [node name="PruebaInteractuable" type="Node3D"]
 script = ExtResource("1_s8inb")
 
 [node name="Interactable" parent="." instance=ExtResource("2_867wh")]
-interact_name = "Prueba interactuable"
+interact_name = "Prueba interactuable [E]"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable"]
 shape = SubResource("SphereShape3D_aec15")
